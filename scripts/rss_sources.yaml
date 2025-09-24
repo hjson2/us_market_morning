@@ -1,0 +1,9 @@
+feeds:
+  - name: Reuters US Markets
+    url: https://feeds.reuters.com/reuters/USmarketsNews
+  - name: Reuters Business
+    url: https://feeds.reuters.com/reuters/businessNews
+  - name: CNBC Top News
+    url: https://www.cnbc.com/id/100003114/device/rss/rss.html
+  - name: Yahoo Finance US
+    url: https://finance.yahoo.com/news/rssindex
