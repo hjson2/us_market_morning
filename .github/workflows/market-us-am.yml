@@ -56,10 +56,10 @@ jobs:
         env:
           BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          PAGES_URL: ${{ steps.deployment.outputs.page_url || 'https://github.com' }}
+          PAGES_URL: ${{ steps.deployment.outputs.page_url || 'https://hjson2.github.io/us_market_morning/' }}
         run: |
           if [ -n "$BOT_TOKEN" ] && [ -n "$CHAT_ID" ]; then
-            TEXT="✅ US 마감 리포트 업데이트\n$PAGES_URL"
+            TEXT="✅ US 마감 리포트 업데이트\r\n $PAGES_URL"
             curl -s "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
               -d "chat_id=${CHAT_ID}" \
               -d "text=${TEXT}" \
